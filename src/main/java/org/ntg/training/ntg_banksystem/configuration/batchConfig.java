@@ -28,11 +28,17 @@ public class batchConfig {
     private final transactionReader transactionReader;
     private final transactionWriter transactionWriter;
 
+    //step3
+    private final operationWriter operationWriter;
+    private final operationTransaction operationTransaction;
+    private final opeartionTransationReader opeartionTransationReader;
+
     @Bean
-    public Job bankJob(JobRepository jobRepository, Step step1, Step step2) {
+    public Job bankJob(JobRepository jobRepository, Step step1, Step step2, Step step3) {
         return new JobBuilder("bankJob",jobRepository)
                 .start(step1)
                 .next(step2)
+                .next(step3)
                 .build();
     }
 
@@ -51,6 +57,16 @@ public class batchConfig {
                 .<Transaction, Transaction> chunk(100, transactionManager)
                 .reader(transactionReader)
                 .writer(transactionWriter)
+                .build();
+    }
+
+    @Bean
+    public Step step3(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
+        return new StepBuilder("step3", jobRepository)
+                .<Transaction, Account>chunk(100, transactionManager)
+                .reader(opeartionTransationReader)
+                .processor(operationTransaction)
+                .writer(operationWriter)
                 .build();
     }
 

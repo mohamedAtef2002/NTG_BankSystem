@@ -1,8 +1,10 @@
 package org.ntg.training.ntg_banksystem.configuration;
 
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
 import org.ntg.training.ntg_banksystem.entity.Account;
 import org.ntg.training.ntg_banksystem.entity.Customer;
+import org.ntg.training.ntg_banksystem.repository.CustomerRepository;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.stereotype.Component;
 
@@ -15,10 +17,14 @@ import java.util.List;
 import java.util.stream.Stream;
 
 @Component
+@RequiredArgsConstructor
 public class customerReader implements ItemReader<Customer> {
 
+    private final CustomerRepository customerRepository;
     private List<Customer> customers;
     private int currentIndex = 0;
+
+
 
     @PostConstruct
     public void init() throws IOException {
@@ -47,11 +53,11 @@ public class customerReader implements ItemReader<Customer> {
                 account.setAccountId(Integer.parseInt(split[1]));
                 account.setBalance(0.00);
                 account.setCustomer(customer);
-
                 customer.setAccounts(new ArrayList<>());
                 customer.getAccounts().add(account);
 
                 customers.add(customer);
+
             });
         }
     }
