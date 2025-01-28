@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
-@RequiredArgsConstructor
+@AllArgsConstructor
 @Setter
 @Getter
 @Entity
@@ -20,10 +20,20 @@ public class Account {
     private Double balance;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id")
+    @JoinColumn(name = "customerId")
     private Customer customer;
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
     private List<Transaction> transactions = new ArrayList<>();
 
+    public Account(Account account) {
+        this.accountId = account.accountId;
+        this.balance = account.balance;
+
+
+        this.transactions = new ArrayList<>();
+        for (Transaction transaction : account.transactions) {
+            this.transactions.add(new Transaction(transaction));
+        }
+    }
 }
