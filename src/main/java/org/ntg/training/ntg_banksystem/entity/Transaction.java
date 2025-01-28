@@ -22,9 +22,9 @@ public class Transaction {
     private double credit;
     private double debit;
     private LocalDateTime timestamp;
+    private int accountId;
 
     @ManyToOne
-    @JoinColumn(name = "account_id")
     private Account account;
 
     public Transaction(Transaction transaction) {
@@ -33,6 +33,8 @@ public class Transaction {
         this.credit = transaction.credit;
         this.debit = transaction.debit;
         this.timestamp = transaction.timestamp;
+        this.accountId = transaction.accountId;
         this.account = transaction.account;
     }
+
 }

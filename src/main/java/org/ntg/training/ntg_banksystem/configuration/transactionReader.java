@@ -60,15 +60,8 @@ public class transactionReader implements ItemReader<Transaction> {
                     transaction.setTimestamp(null);
                 }
 
-
-
-
-
-
                 int accountId = Integer.parseInt(split[1].trim());
-                Account account = accountRepository.findByAccountId(accountId);
-                transaction.setAccount(account);
-
+                transaction.setAccountId(accountId);
                 transactions.add(transaction);
             });
         }

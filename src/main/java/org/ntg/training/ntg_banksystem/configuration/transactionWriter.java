@@ -3,6 +3,7 @@ package org.ntg.training.ntg_banksystem.configuration;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.ntg.training.ntg_banksystem.entity.Transaction;
+import org.ntg.training.ntg_banksystem.repository.AccountRepository;
 import org.ntg.training.ntg_banksystem.repository.TransactionRepository;
 import org.springframework.batch.item.Chunk;
 import org.springframework.batch.item.ItemWriter;
@@ -16,6 +17,7 @@ import java.util.List;
 public class transactionWriter implements ItemWriter<Transaction> {
 
     private final TransactionRepository transactionRepository;
+    private final AccountRepository accountRepository;
 
     @Override
     public void write(Chunk<? extends Transaction> transactions) throws Exception {
@@ -29,16 +31,15 @@ public class transactionWriter implements ItemWriter<Transaction> {
         List<Integer> existsTraInteger = transactionRepository.getTransactionId();
 
         List<Transaction> newTransaction = uniqueTransaction.stream()
-                .filter(customer -> !existsTraInteger.contains(customer.getTransactionId()))
+                .filter(transaction -> !existsTraInteger.contains(transaction.getTransactionId()))
                 .toList();
 
         if (!newTransaction.isEmpty()) {
             try {
                 transactionRepository.saveAll(newTransaction);
-                log.info("Saved {} new transaction to the database.", newTransaction.size());
-            }catch (Exception e){
-                log.error(e.getMessage());
-                log.error("Error saving transaction to the database.", e);
+                log.info("Saved {} new transaction(s) to the database.", newTransaction.size());
+            } catch (Exception e) {
+                log.error("Error saving transactions to the database: {}", e.getMessage());
             }
         }else {
             log.info("No new transaction to save. All provided transaction already exist in the database.");

@@ -35,6 +35,14 @@ public class Customer {
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Account> accounts;
 
+    public void addAccount(Account account) {
+        if (accounts == null) {
+            accounts = new ArrayList<>();
+        }
+        accounts.add(account);
+        account.setCustomer(this);
+    }
+
     public Customer(Customer customer) {
         this.customerId = customer.customerId;
         this.firstName = customer.firstName;

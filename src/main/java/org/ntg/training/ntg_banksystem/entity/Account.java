@@ -1,5 +1,6 @@
 package org.ntg.training.ntg_banksystem.entity;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,13 +15,13 @@ import java.util.List;
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long unId;
 
     private int accountId;
     private Double balance;
 
     @ManyToOne
-    @JoinColumn(name = "customerId")
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL)
@@ -35,5 +36,10 @@ public class Account {
         for (Transaction transaction : account.transactions) {
             this.transactions.add(new Transaction(transaction));
         }
+    }
+
+    public void addTransaction(Transaction transaction) {
+        transaction.setAccount(this);
+        this.transactions.add(transaction);
     }
 }
