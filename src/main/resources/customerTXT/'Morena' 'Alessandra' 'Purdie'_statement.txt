@@ -1,0 +1,14 @@
+'Morena'  'Purdie'                                                      NTG Bank
+ '9 Dexter Park'                                                     1060 West Addison St.
+ 'San Diego',  'California'  '90055'                                           Chicago, IL 60613
+
+Your Account Summary
+Statement Period:                                          Start Date - End Date
+
+2018-06-26T07:22:06          Skiptube            23777.00            
+2018-06-27T00:15:03          Kwideo              2732.00             
+
+Total Debit:                                               2732.000000
+Total Credit:                                             23777.000000
+Balance:                                                  21045.000000
+

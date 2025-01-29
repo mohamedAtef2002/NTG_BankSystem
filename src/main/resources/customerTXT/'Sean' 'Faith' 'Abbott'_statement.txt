@@ -1,0 +1,14 @@
+'Sean'  'Abbott'                                                        NTG Bank
+ '6 Bay Road'                                                        1060 West Addison St.
+ 'Fort Pierce',  'Florida'  '32244'                                           Chicago, IL 60613
+
+Your Account Summary
+Statement Period:                                          Start Date - End Date
+
+2018-06-04T04:48:54          Flashdog            12193.14            
+2018-06-05T02:51:34          Twinte              963.00              
+
+Total Debit:                                                963.000000
+Total Credit:                                             12193.140000
+Balance:                                                  11230.140000
+

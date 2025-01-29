@@ -1,0 +1,14 @@
+'Warde'  'Beevens'                                                      NTG Bank
+ '164 Ohio Way'                                                      1060 West Addison St.
+ 'Peoria',  'Illinois'  '20062'                                           Chicago, IL 60613
+
+Your Account Summary
+Statement Period:                                          Start Date - End Date
+
+2018-06-18T07:48:35          Bubblemix           9940.17             
+2018-06-16T14:22:35          Roombo              14582.12            
+
+Total Debit:                                                  0.000000
+Total Credit:                                             24522.290000
+Balance:                                                  24522.290000
+
