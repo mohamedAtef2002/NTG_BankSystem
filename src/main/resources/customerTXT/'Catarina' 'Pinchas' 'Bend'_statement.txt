@@ -1,0 +1,14 @@
+'Catarina'  'Bend'                                                      NTG Bank
+ '99 Roth Center'                                                    1060 West Addison St.
+ 'Pittsburgh',  'Pennsylvania'  '46221'                                           Chicago, IL 60613
+
+Your Account Summary
+Statement Period:                                          Start Date - End Date
+
+2018-06-08T00:30:34          Zooxo               1068.00             
+2018-06-29T07:10:33          Meedoo              881.00              
+
+Total Debit:                                               1949.000000
+Total Credit:                                                 0.000000
+Balance:                                                  -1949.000000
+

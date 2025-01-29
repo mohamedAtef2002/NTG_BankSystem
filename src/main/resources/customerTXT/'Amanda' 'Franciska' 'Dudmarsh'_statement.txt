@@ -1,0 +1,14 @@
+'Amanda'  'Dudmarsh'                                                    NTG Bank
+ '084 Knutson Parkway'                                                 1060 West Addison St.
+ 'Washington',  'District of Columbia'  '33625'                                           Chicago, IL 60613
+
+Your Account Summary
+Statement Period:                                          Start Date - End Date
+
+2018-06-25T17:36:05          Mydeo               3488.00             
+2018-06-05T19:26:18          Geba                7043.67             
+
+Total Debit:                                               3488.000000
+Total Credit:                                              7043.670000
+Balance:                                                   3555.670000
+

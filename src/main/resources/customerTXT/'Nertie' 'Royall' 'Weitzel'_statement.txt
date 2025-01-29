@@ -1,0 +1,14 @@
+'Nertie'  'Weitzel'                                                     NTG Bank
+ '90983 Talisman Circle'                                                 1060 West Addison St.
+ 'Charleston',  'West Virginia'  '98042'                                           Chicago, IL 60613
+
+Your Account Summary
+Statement Period:                                          Start Date - End Date
+
+2018-06-11T16:14:38          Rhynoodle           47.00               
+2018-06-04T16:42:16          Livetube            2320.00             
+
+Total Debit:                                               2367.000000
+Total Credit:                                                 0.000000
+Balance:                                                  -2367.000000
+

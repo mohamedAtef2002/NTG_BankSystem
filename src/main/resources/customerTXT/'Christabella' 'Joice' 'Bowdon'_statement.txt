@@ -1,0 +1,14 @@
+'Christabella'  'Bowdon'                                                    NTG Bank
+ '32 Butternut Drive'                                                 1060 West Addison St.
+ 'Saint Louis',  'Missouri'  '34745'                                           Chicago, IL 60613
+
+Your Account Summary
+Statement Period:                                          Start Date - End Date
+
+2018-06-26T23:48:28          Thoughtbeat         1589.00             
+2018-06-16T18:40:55          Tagcat              629.00              
+
+Total Debit:                                               2218.000000
+Total Credit:                                                 0.000000
+Balance:                                                  -2218.000000
+

@@ -1,0 +1,14 @@
+'Nedda'  'Evamy'                                                        NTG Bank
+ '88817 Clyde Gallagher Parkway'                                                 1060 West Addison St.
+ 'Houston',  'Texas'  '80995'                                           Chicago, IL 60613
+
+Your Account Summary
+Statement Period:                                          Start Date - End Date
+
+2018-06-19T10:46:09          Yozio               17603.88            
+2018-06-27T22:57:26          Dazzlesphere        831.00              
+
+Total Debit:                                                831.000000
+Total Credit:                                             17603.880000
+Balance:                                                  16772.880000
+
