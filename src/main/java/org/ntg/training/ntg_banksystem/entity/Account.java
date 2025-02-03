@@ -19,6 +19,7 @@ public class Account {
 
     private int accountId;
     private Double balance;
+    private int customerAccountId;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
