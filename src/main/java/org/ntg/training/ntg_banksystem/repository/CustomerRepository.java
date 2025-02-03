@@ -11,4 +11,7 @@ import java.util.List;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
     @Query("select c.customerId from Customer c")
     List<Integer> getCustomerId();
+
+    @Query("select c.postalCode from  Customer c")
+    List<String> getPostalCode();
 }

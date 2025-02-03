@@ -32,7 +32,7 @@ public class operationTransaction implements ItemProcessor<Transaction, Account>
                 account.setBalance(account.getBalance() - transaction.getDebit());
                 log.info("Debited {} from account ID {}. New balance: {}", transaction.getDebit(), accountId, account.getBalance());
             } else {
-                log.error("Insufficient funds in account ID {}. Transaction ID: {}", accountId, transaction.getTransactionId());
+                log.info("Insufficient funds in account ID {}. Transaction ID: {}", accountId, transaction.getTransactionId());
                 account.setBalance(account.getBalance() - transaction.getDebit());
             }
         }

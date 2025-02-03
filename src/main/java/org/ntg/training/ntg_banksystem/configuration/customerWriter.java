@@ -28,19 +28,20 @@ public class customerWriter implements ItemWriter<Customer> {
                 .filter(u -> u.getCustomerId() != 0)
                 .toList();
 
-        List<Integer> existsCustomer = customerRepository.getCustomerId();
+        List<String> existsCustomer = customerRepository.getPostalCode();
 
         List<Customer> newCustomer = uniqueUsers.stream()
-                .filter(customer -> !existsCustomer.contains(customer.getCustomerId()))
+                .filter(customer -> !existsCustomer.contains(customer.getPostalCode()))
                 .toList();
 
         if (!newCustomer.isEmpty()) {
             try {
-                List<Customer> savedCustomers = customerRepository.saveAll(newCustomer);
+                List<Customer> savedCustomers = customerRepository.saveAll(uniqueUsers);
                 savedCustomers.forEach(customer -> {
 
                     customer.getAccounts().forEach(account -> {
                         account.setCustomer(customer);
+                        account.setCustomerAccountId(customer.getCustomerId());
                     });
                     accountRepository.saveAll(customer.getAccounts());
                 });
