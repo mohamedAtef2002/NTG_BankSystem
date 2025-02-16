@@ -2,7 +2,6 @@ package org.ntg.training.ntg_banksystem.configuration;
 
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
-import org.ntg.training.ntg_banksystem.entity.Account;
 import org.ntg.training.ntg_banksystem.entity.Transaction;
 import org.ntg.training.ntg_banksystem.repository.AccountRepository;
 import org.springframework.batch.item.ItemReader;
@@ -20,7 +19,7 @@ import java.util.stream.Stream;
 
 @Component
 @RequiredArgsConstructor
-public class transactionReader implements ItemReader<Transaction> {
+public class   transactionReader implements ItemReader<Transaction> {
 
     private final AccountRepository accountRepository;
     private List<Transaction> transactions;

@@ -4,9 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.ntg.training.ntg_banksystem.entity.Transaction;
 import org.ntg.training.ntg_banksystem.repository.TransactionRepository;
 import org.springframework.batch.item.ItemReader;
-import org.springframework.batch.item.NonTransientResourceException;
-import org.springframework.batch.item.ParseException;
-import org.springframework.batch.item.UnexpectedInputException;
 import org.springframework.stereotype.Component;
 
 import java.util.Iterator;
