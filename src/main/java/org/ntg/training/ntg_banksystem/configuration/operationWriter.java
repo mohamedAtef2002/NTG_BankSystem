@@ -39,7 +39,7 @@ public class operationWriter implements ItemWriter<Account> {
 
         for (Customer customer : customers) {
             String middleName = customer.getMiddleName() != null ? customer.getMiddleName() : "";
-            String fileName = customer.getFirstName() + middleName + customer.getLastName() + "_statement.pdf";
+            String fileName = customer.getFirstName() + middleName + customer.getLastName() + customer.getCustomerId() + "_statement.pdf";
             generateCustomerPdf(customer, fileName);
         }
     }

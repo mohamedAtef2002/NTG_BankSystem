@@ -1,6 +1,5 @@
 package org.ntg.training.ntg_banksystem.entity;
 
-import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.*;
 
